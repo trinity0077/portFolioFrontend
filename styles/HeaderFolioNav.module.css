@@ -1,0 +1,66 @@
+/* Conteneur principal */
+.Container {
+    background-color: #333;
+  }
+  
+  /* Boutons de navigation */
+  .button {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.1); /* Agrandissement */
+  }
+  
+  .button-active {
+    color: #e9cc59;
+    opacity: 1;
+  }
+  
+  /* Conteneur Email */
+  .container-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacement entre icône et texte */
+    cursor: pointer;
+  }
+  
+  .container-email a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: rotate(-7deg);
+  }
+  
+  .container-email a:hover {
+    transform: scale(1.1); /* Agrandissement */
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+  }
+  
+  /* .icon:hover {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  } */
+  
+  .text {
+    margin: 0;
+  }
+  
+  /* .text:hover {
+    transform: rotate(0deg);
+  } */
+  

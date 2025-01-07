@@ -1,0 +1,215 @@
+/* .homeContainerAll{
+	background-color: rgb(255, 255, 255);
+} */
+.userNotConnected{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* animation: rotation 5s infinite; */
+}
+
+@keyframes rotation {
+	0% {
+	  transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+	  transform: translate(-50%, -50%) rotate(360deg);
+	}
+  }
+
+.sectionTitle {
+	margin-left: 25px;
+}
+.graphecontainerone {
+	box-sizing:content-box;
+	background-color: rgb(255, 255, 255);
+	margin: 10px;
+	border-radius: 10px;
+	border: 1.5px solid rgb(89, 125, 233);
+	 /* Limite la hauteur du conteneur à 40% de la hauteur de l'écran */
+     /* Cache le contenu qui dépasse */
+}
+.graphecontainer {
+	box-sizing:content-box;
+	margin: 10px;
+	height:100%;
+
+
+}
+.graphe {
+
+	box-sizing:content-box;
+}
+
+.cigaddlesscontainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+
+}
+
+.btnCigSectionplus {
+	color:rgb(89, 125, 233) ;
+	font-size: 45px;
+	width: 12vw;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.btnCigSectionplus:hover {
+	transform: scale(1.2);
+	opacity: 0.8;
+}
+
+.btnCigSectionminus {
+	color:rgb(89, 125, 233) ;
+	font-size: 20px;
+	width: 12vw;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.btnCigSectionminus:hover {
+	transform: scale(1.4);
+	opacity: 0.8;
+	
+}
+
+.cigaddlesscontainerone {
+	background-color: rgb(255, 255, 255);
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	border-radius: 10px;
+	border: 1px solid rgb(89, 125, 233)
+}
+.error {
+	position: absolute;
+	opacity: 0.6; /* ajoute de la transparence*/
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);/* test ?! vérifier comment ça fonctionne*/
+	background-color: rgb(89, 125, 233); /* Couleur de fond avec transparence */
+	color: #fff; /* Couleur du texte */
+	font-size: 30px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	z-index: 9999; /* Valeur élevée pour afficher par-dessus le reste */
+  }
+ 
+
+  .infoUserContainerOne{
+	
+	background-color: rgb(255, 255, 255);
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px;
+	border-radius: 10px;
+	border: 1.5px solid rgb(89, 125, 233)
+  }
+  .infoUserContainerSmokeCigCount{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	margin: 10px;
+	
+  }
+  .infoUserContainerSmokeCigCountBig{
+	color:rgb(89, 125, 233);
+	text-shadow: -1px -1px 0px #000;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+	margin: 5px;
+  }
+  .calculatePriceCss{
+	font-weight: bold;
+	font-size: 30px;
+	color: rgb(54, 98, 231);
+	text-shadow: 1px 1px 0px #fef8f8;
+  }
+
+  @media (min-width: 798px) { /* Par exemple, à partir de 768px de large */
+	.infoUserContainerOne {
+		display: flex;
+		flex-direction: row; /* Affichage en ligne */
+		
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+		
+	}
+	.infoUserContainerSmokeCigCount{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+		margin: 10px;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		
+	  }
+	.cigaddlesscontainerone {
+		display: flex;
+		flex-direction: row; /* Affichage en ligne */
+		
+		align-items: center;
+		justify-content: center;
+		margin: 10px;
+	}
+
+	.graphecontainer {
+		box-sizing:content-box;
+		margin: 10px;
+		margin-left: 10%;
+		margin-right: 10%;
+		
+	
+	
+	}
+	.graphe {
+	
+		box-sizing:content-box;
+	}
+
+
+}
+@media (min-width: 1000px) { /* Par exemple, à partir de 768px de large */
+	.graphecontainer {
+		box-sizing:content-box;
+		margin: 10px;
+		margin-left: 18%;
+		margin-right: 18%;
+		
+	
+	
+	}
+}
+
+@media (min-width: 1500px) { /* Par exemple, à partir de 768px de large */
+	.infoUserContainerOne {
+		display: flex;
+		flex-direction: row; /* Affichage en ligne */
+		
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+		
+		
+	}
+	.graphecontainer {
+		box-sizing:content-box;
+		margin: 10px;
+		margin-left: 23%;
+		margin-right: 23%;
+		
+	}
+}
