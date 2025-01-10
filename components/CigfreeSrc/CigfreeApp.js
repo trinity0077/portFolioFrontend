@@ -1,13 +1,13 @@
-import Header from "./CigfreeHeader";
+import CigFreeHeader from "./CigfreeHeader";
 import CigfreeHomeFront from "./CigfreeHomeFront";
 
 function CigfreeApp() {
   return (
     <div>
-      <Header />
+      <CigFreeHeader />
       <CigfreeHomeFront />
     </div>
   );
 }
 
-export default CigfreeApp;
+export default CigfreeApp; 

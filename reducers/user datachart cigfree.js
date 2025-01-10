@@ -18,10 +18,13 @@ export const userSlice = createSlice({
       state.value.token = null;
       state.value.userName = null;
       state.value.dateCreation = null;
-      state.value.dataChart = [null]
+      state.value.dataChart = [null];
+    },
+    updateDataChart: (state, action) => {    
+      state.value.dataChart = action.payload.dataChart;
     },
   },
 });
 
-export const { login, logout } = userSlice.actions;
+export const { login, logout, updateDataChart } = userSlice.actions;
 export default userSlice.reducer;

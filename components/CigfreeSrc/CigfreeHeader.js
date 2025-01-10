@@ -8,7 +8,7 @@ import Moment from "react-moment";
 import "moment/locale/fr";
 import { Modal } from "antd";
 
-function Header() {
+function CigfreeHeader() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
 
@@ -188,12 +188,9 @@ function Header() {
         <div className={styles.logoutSectionUsername}>{user.userName}</div>
         <div className={styles.logoutSectionbot}>
           <button onClick={() => handleLogout()}> Logout</button>
-          {/* <FontAwesomeIcon  onClick={showModal} className={styles.eye} icon={faEye}  /> */}
         </div>
       </div>
     );
-
-    // ajout de dateCreation ici via route signin.+ reducer
   } else {
     if (isModalVisible) {
       userSection = (
@@ -223,7 +220,6 @@ function Header() {
       <div className={styles.headerAllContainer}>
         <div className={styles.topHeadercontainer}>
           <div className={styles.logoContainer}>
-            {/* <Moment className={styles.date} date={date} format="D MMMM YYYY" /> */}
             <h1 className={styles.title}>Ciga Free</h1>
             {userSection}
           </div>
@@ -252,16 +248,4 @@ function Header() {
   );
 }
 
-export default Header;
-// const formattedDateCreationUser = new Date(user.dateCreation).toLocaleDateString();
-//   console.log(formattedDateCreationUser)
-//   userSectionDateinscription = (
-//     <div className={styles.containerNavigationInfo}>
-//       <div className={styles.containerInscriptionDate}>
-//         <div className={styles.InscriptionDate}>
-//           Inscrit le{" "}
-//           <Moment date={formattedDateCreationUser} format="D MMMM YYYY" />
-//         </div>
-//       </div>
-//     </div>
-//   );
+export default CigfreeHeader;

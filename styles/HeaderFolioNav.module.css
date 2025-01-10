@@ -1,66 +1,73 @@
+.nav{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem ;
+  padding-bottom: 1rem;
+  align-items: center;
+  font-size: x-large ;
+  background-color: #7d9b79;
+}
+
 /* Conteneur principal */
-.Container {
-    background-color: #333;
-  }
-  
-  /* Boutons de navigation */
-  .button {
-    padding: 0.5rem 1rem;
-    border: none;
-    color: white;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .button:hover {
-    transform: scale(1.1); /* Agrandissement */
-  }
-  
-  .button-active {
-    color: #e9cc59;
-    opacity: 1;
-  }
-  
-  /* Conteneur Email */
-  .container-email {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Espacement entre icône et texte */
-    cursor: pointer;
-  }
-  
-  .container-email a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    opacity: 0.6;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: rotate(-7deg);
-  }
-  
-  .container-email a:hover {
-    transform: scale(1.1); /* Agrandissement */
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .icon {
-    font-size: 1.5rem;
-  }
-  
-  /* .icon:hover {
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-  } */
-  
-  .text {
-    margin: 0;
-  }
-  
-  /* .text:hover {
-    transform: rotate(0deg);
-  } */
-  
+/* .container {
+  background-color: #7d9b79;
+} */
+
+/* Boutons de navigation */
+.button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: inherit;
+  align-items: center;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+  opacity: 1;
+}
+
+.button-active {
+  color: #ffffff;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Conteneur Email */
+.container-email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacement entre icône et texte */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+  font-size: inherit;
+}
+.container-email:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.container-email a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: inherit;
+}
+
+.container-email img.emailIconPlane {
+  transform: rotate(-10deg);
+  transition: transform 0.3s ease;
+}
+
+.container-email:hover img.emailIconPlane {
+  transform: rotate(0deg);
+}
+.container-email p {
+  font-size: inherit;
+}
+

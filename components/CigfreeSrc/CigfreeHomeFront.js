@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Head from "next/head";
 import Graphebar from "./Graphebar"; //Graphebarjour
 import Graphebarjour from "./Graphebarjour";
 import styles from "../../styles/CigfreeHomeFront.module.css";
@@ -195,9 +194,6 @@ function CigfreeHomeFront() {
     <div>
       {user.token ? (
         <div className={styles.homeContainerAll}>
-          <Head>
-            <title>Cig free - Home</title>
-          </Head>
           <div className={styles.infoUserContainerOne}>
             <div className={styles.infoUserContainerSmokeCigCount}>
               <div className={styles.infoUserContainerSmokeCigCountBig}>
