@@ -89,7 +89,7 @@ function CigfreeHeader() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data, "connection");
+        console.log(data, "connection retour de la BDD et du backend");
         if (data.result) {
           dispatch(
             login({
