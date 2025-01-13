@@ -27,15 +27,8 @@ function CigfreeHeader() {
   const BACKEND_ADDRESS =
     window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://cig-backend-vercel.vercel.app";
+      : "https://port-folio-backend-three.vercel.app/";
 
-  // const backendOnline = false; // switch true or false manualy
-  // if (backendOnline) {
-  //   BACKEND_ADDRESS = "https://cigfreeback.vercel.app";
-  //   //                 https://cigfreeback.vercel.app/
-  // } else {
-  //   BACKEND_ADDRESS = "http://localhost:3000";
-  // }
 
   useEffect(() => {
     setDate(new Date());
@@ -53,7 +46,7 @@ function CigfreeHeader() {
       body: JSON.stringify({
         userName: signUpUsername,
         password: signUpPassword,
-        dateCreation: null,
+
       }),
     })
       .then((response) => response.json())
