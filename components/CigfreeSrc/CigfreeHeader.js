@@ -178,7 +178,7 @@ function CigfreeHeader() {
     userSection = (
       <div className={styles.logoutSection}>
         <p>Salutation</p>
-        <div className={styles.logoutSectionUsername}>{user.username}</div>
+        <div className={styles.logoutSectionUsername}>{userCigFree.username}</div>
         <div className={styles.logoutSectionbot}>
           <button onClick={() => handleLogout()}> Logout</button>
         </div>
