@@ -30,10 +30,11 @@ function CigfreeHomeFront() {
   // let BACKEND_ADDRESS = ""
   let cigaretteprice = 0.6;
 
+  // important.... pas de / apres l'adresse sur vercel
   const BACKEND_ADDRESS =
     window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://port-folio-backend-three.vercel.app";
+      : "https://port-folio-backend-three.vercel.app"; // danger \\
 
   // console.log('backend adrresssss',BACKEND_ADDRESS )
 
