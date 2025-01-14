@@ -33,7 +33,7 @@ function CigfreeHomeFront() {
   const BACKEND_ADDRESS =
     window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://port-folio-backend-three.vercel.app/";
+      : "https://port-folio-backend-three.vercel.app";
 
   // console.log('backend adrresssss',BACKEND_ADDRESS )
 
