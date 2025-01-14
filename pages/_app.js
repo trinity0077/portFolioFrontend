@@ -11,7 +11,8 @@ import { persistStore, persistReducer } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
-const reducers = combineReducers({ user });
+// const reducers = combineReducers({ user, userCigFree }); old test
+const reducers = combineReducers({ userCigFree });
 const persistConfig = { key: "cigfree", storage: createWebStorage("local") };
 
 const store = configureStore({

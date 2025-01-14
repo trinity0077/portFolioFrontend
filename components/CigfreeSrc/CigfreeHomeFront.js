@@ -15,7 +15,7 @@ import { calculateprice } from "../../modules/calculateprice";
 // import du graphique
 
 function CigfreeHomeFront() {
-  const user = useSelector((state) => state.user.value);
+  const user = useSelector((state) => state.userCigFree.value);
 
   const [errorMessage, setErrorMessage] = useState("");
   const [errorMessageSavedCig, setErrorMessageSavedCig] = useState("");

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { login, logout } from "../../reducers/user";
+import { login, logout } from "../../reducers/userCigFree";
 import styles from "../../styles/Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ import { Modal } from "antd";
 
 function CigfreeHeader() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.value);
+  const user = useSelector((state) => state.userCigFree.value);
 
   const [date, setDate] = useState("2050-11-22T23:59:59");
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -44,9 +44,8 @@ function CigfreeHeader() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userName: signUpUsername,
+        username: signUpUsername,
         password: signUpPassword,
-
       }),
     })
       .then((response) => response.json())
@@ -55,7 +54,7 @@ function CigfreeHeader() {
         if (data.result) {
           dispatch(
             login({
-              userName: data.userName,
+              userName: data.username,
               token: data.token,
               dateCreation: data.dateCreation,
             })
@@ -77,13 +76,13 @@ function CigfreeHeader() {
   const handleRegisterSignIn = () => {
     console.log(
       BACKEND_ADDRESS,
-      `user info conection  mail ${signInUsername} et pdw ${signInPassword}`
+      `user info conection  email ${signInUsername} et pdw ${signInPassword}`
     );
     fetch(`${BACKEND_ADDRESS}/users/signin`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userName: signInUsername,
+        username: signInUsername,
         password: signInPassword,
       }),
     })
@@ -91,9 +90,10 @@ function CigfreeHeader() {
       .then((data) => {
         console.log(data, "connection retour de la BDD et du backend");
         if (data.result) {
+          console.log('6 arrivé dans le fetch de signin')
           dispatch(
             login({
-              userName: signInUsername,
+              username: signInUsername,
               token: data.token,
               dateCreation: data.dateCreation,
             })
@@ -178,7 +178,7 @@ function CigfreeHeader() {
     userSection = (
       <div className={styles.logoutSection}>
         <p>Salutation</p>
-        <div className={styles.logoutSectionUsername}>{user.userName}</div>
+        <div className={styles.logoutSectionUsername}>{user.username}</div>
         <div className={styles.logoutSectionbot}>
           <button onClick={() => handleLogout()}> Logout</button>
         </div>
