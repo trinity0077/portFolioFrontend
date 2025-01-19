@@ -93,7 +93,7 @@ function CigfreeHeader() {
           console.log('6 arrivé dans le fetch de signin')
           dispatch(
             login({
-              username: signInUsername,
+              userName: signInUsername,
               token: data.token,
               dateCreation: data.dateCreation,
             })
@@ -178,7 +178,9 @@ function CigfreeHeader() {
     userSection = (
       <div className={styles.logoutSection}>
         <p>Salutation</p>
-        <div className={styles.logoutSectionUsername}>{user.username}</div>
+        <div className={styles.logoutSectionUsername}>
+          {user.userName}
+          </div>
         <div className={styles.logoutSectionbot}>
           <button onClick={() => handleLogout()}> Logout</button>
         </div>

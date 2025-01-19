@@ -12,7 +12,7 @@ export const userSlice = createSlice({
       state.value.token = action.payload.token;
       state.value.userName = action.payload.userName;
       state.value.dateCreation = action.payload.dateCreation;
-      console.log('login du reducer userCigFree')
+      console.log('login du reducer userCigFree userName', state.value.userName)
     },
     logout: (state) => {
       state.value.token = null;
