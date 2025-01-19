@@ -57,6 +57,7 @@ function CigfreeHeader() {
               userName: data.username,
               token: data.token,
               dateCreation: data.dateCreation,
+              cigarettePrice: data.cigaretteprice,
             })
           );
           setSignUpUsername("");
@@ -96,6 +97,7 @@ function CigfreeHeader() {
               userName: signInUsername,
               token: data.token,
               dateCreation: data.dateCreation,
+              cigarettePrice: data.cigaretteprice,
             })
           );
           setSignInUsername("");

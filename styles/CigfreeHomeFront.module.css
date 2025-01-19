@@ -103,6 +103,20 @@
 	z-index: 9999; /* Valeur élevée pour afficher par-dessus le reste */
   }
  
+.infoUserContainerPriceCig{
+	background-color: rgb(255, 255, 255);
+	justify-content: space-around;
+	margin: 10px;
+	border-radius: 10px;
+	border: 1.5px solid rgb(89, 125, 233);
+	display: flex;
+	flex-direction: row; /* Affichage en ligne */
+	
+	/* justify-content: center; */
+	align-items: center;
+	margin: 10px;
+}
+
 
   .infoUserContainerOne{
 	
