@@ -26,10 +26,11 @@ function CigfreeHomeFront() {
   const [realoadData, setRealoadData] = useState(false);
   const [chartData, setChartData] = useState([]);
   const [chartDataDay, setChartDataDay] = useState([]);
+  const [cigarettePrice, setCigarettePrice] = useState(0.6);
   const [loading, setLoading] = useState(true);
 
   // let BACKEND_ADDRESS = ""
-  let cigaretteprice = 0.6;
+  // let cigarettePrice = 0.6;
 
   // important.... pas de / apres l'adresse sur vercel
   const BACKEND_ADDRESS =
@@ -65,13 +66,13 @@ function CigfreeHomeFront() {
             settotalNoSmoked(totalNoSmoke);
   
             const calculateDepense = async () => {
-              const depense = calculateprice(Number(totalSmoke), cigaretteprice);
+              const depense = calculateprice(Number(totalSmoke), cigarettePrice);
               setTotalDepenseCigarette(depense);
             };
             calculateDepense();
   
             const calculateEconomies = async () => {
-              const economies = calculateprice(Number(totalNoSmoke), cigaretteprice);
+              const economies = calculateprice(Number(totalNoSmoke), cigarettePrice);
               setTotalSaveInEuroCigarette(economies);
             };
             calculateEconomies();
@@ -181,6 +182,16 @@ function CigfreeHomeFront() {
         <div className={styles.homeContainerAll}>
           <div className={styles.infoUserContainerOne}>
             <div className={styles.infoUserContainerSmokeCigCount}>
+           <p>Prix d'une cigarette <input
+            type="text"
+            placeholder="0.6"
+            id="Cigaretteprice"
+            onChange={(e) => setCigarettePrice(e.target.value)}
+            value={cigarettePrice}
+          />  €        <button id="register" onClick={setRealoadData}>
+        confirmer
+        </button>
+          </p>
               <div className={styles.infoUserContainerSmokeCigCountBig}>
                 {totalSmoked}
               </div>
