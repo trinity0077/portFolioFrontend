@@ -12,6 +12,8 @@ const FolioNavAndRedirection = () => {
 // demarage sur le 1 er bouton
   useEffect(() => {
     setActiveButton(1);
+    const defaultTitle = getHeadTitle(1); // Définit le titre par défaut
+    setActiveHeader(defaultTitle); // Met à jour l'état du titre
   }, []);
   
   // les titles Header des composants activé

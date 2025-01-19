@@ -12,8 +12,6 @@ export const userSlice = createSlice({
       state.value.token = action.payload.token;
       state.value.userName = action.payload.userName;
       state.value.dateCreation = action.payload.dateCreation;
-      state.value.dataChartWeek = action.payload.dataChartWeek;
-      state.value.dataChartMonth = action.payload.dataChartMonth;
       console.log('login du reducer userCigFree')
     },
     logout: (state) => {
@@ -24,10 +22,13 @@ export const userSlice = createSlice({
       state.value.chartDataMonth = [null];
     },
     updateDataChartWeek: (state, action) => {    
-      state.value.chartDataWeek = action.payload.chartDataWeek;
+      state.value.chartDataWeek = action.payload;
+      console.log('Reducer updateDataChartWeek sur userCigFree',state.value.chartDataWeek )
     },
-    updateDataChartMonth: (state, action) => {    
-      state.value.chartDataMonth = action.payload.chartDataMonth;
+    updateDataChartMonth: (state, action) => {
+      // Remplir directement avec les données reçues sans altérer leur format
+      state.value.chartDataMonth = action.payload;
+      console.log('Reducer updateDataChartMonth sur userCigFree:', state.value.chartDataMonth);
     },
   },
 });
