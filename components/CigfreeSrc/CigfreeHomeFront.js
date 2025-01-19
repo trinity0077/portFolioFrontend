@@ -26,6 +26,7 @@ function CigfreeHomeFront() {
   const [realoadData, setRealoadData] = useState(false);
   const [chartData, setChartData] = useState([]);
   const [chartDataDay, setChartDataDay] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // let BACKEND_ADDRESS = ""
   let cigaretteprice = 0.6;
@@ -47,65 +48,48 @@ function CigfreeHomeFront() {
     if (user.token) {
       const fetchDataSmoke = async () => {
         try {
-          const response = await fetch(
-            `${BACKEND_ADDRESS}/users/datasmoke/${user.token}`
-          );
+          setLoading(true); // Lancement du chargement
+          const response = await fetch(`${BACKEND_ADDRESS}/users/datasmoke/${user.token}`);
           const data = await response.json();
           console.log(data);
-
+  
           if (data.result) {
             const { userDataSmoke, userDataNotSmoked } = data;
-
+  
             setChartData(groupDataByMonth(userDataSmoke));
             setChartDataDay(groupDataByDay(userDataSmoke));
-
-            console.log(chartData, "consolelog 9 dans fecth de chartdatabymonth");
-            console.log(
-              chartDataDay,
-              "consolelog dans fecth de chartdatabyDay"
-            );
-
+  
             const totalSmoke = userDataSmoke.length;
             const totalNoSmoke = userDataNotSmoked.length;
             settotalSmoked(totalSmoke);
             settotalNoSmoked(totalNoSmoke);
-
+  
             const calculateDepense = async () => {
-              const depense = calculateprice(
-                Number(totalSmoke),
-                cigaretteprice
-              );
+              const depense = calculateprice(Number(totalSmoke), cigaretteprice);
               setTotalDepenseCigarette(depense);
-              console.log(depense, "calculateDepense");
             };
             calculateDepense();
-
+  
             const calculateEconomies = async () => {
-              const economies = calculateprice(
-                Number(totalNoSmoke),
-                cigaretteprice
-              );
+              const economies = calculateprice(Number(totalNoSmoke), cigaretteprice);
               setTotalSaveInEuroCigarette(economies);
-              // console.log(economies, 'calculateEconomies')
             };
-            // function qui arrondi le resultat de calculateprice. calculate price
-            // prend 2 valleur totalnosmoke formater en number et du prix de cigarette
-            // le toFixed() apres permet de formater le resultat poru garder toujours 2 chiffre apres la virgule.
-            calculateEconomies(); // lance la function ecrire au dessus qui est asynchrone.
+            calculateEconomies();
+  
           } else {
-            // Gérez le cas où la requête n'a pas réussi ou les données ne sont pas disponibles
             console.log(data.error);
           }
         } catch (error) {
-          // Gérez les erreurs lors de la requête
           console.error(error);
+        } finally {
+          setLoading(false); // Fin du chargement, que ce soit en cas de succès ou d'erreur
         }
       };
+  
       fetchDataSmoke();
-
-      console.log("token de l utilisateur", user.token);
     }
-  }, [user.token, realoadData,]);
+  }, [user.token, realoadData]);
+  
 
   //////////////////test fonction  gain / depense cigarette ///////
 
@@ -258,33 +242,43 @@ function CigfreeHomeFront() {
             </div>
           </div>
 
+ {/* Affichage conditionnel des graphiques */}
+ {loading ? (
+          <p>Chargement des graphiques...</p>
+        ) : (
           <div className={styles.graphecontainerone}>
-  {chartDataDay && chartDataDay.length > 0 ? (
-    <div className={styles.graphecontainer}>
-      <Graphebarjour chartDataDay={chartDataDay} className={styles.graphe} />
-    </div>
-  ) : (
-    <p>Chargement des données pour le graphique...</p>
-  )}
-</div>
+            {chartDataDay && chartDataDay.length > 0 ? (
+              <div className={styles.graphecontainer}>
+                <Graphebarjour chartDataDay={chartDataDay} className={styles.graphe} />
+              </div>
+            ) : (
+              <p>Aucune donnée disponible pour le graphique de jour.</p>
+            )}
+          </div>
+        )}
 
+        {loading ? (
+          <p>Chargement des graphiques...</p>
+        ) : (
           <div className={styles.graphecontainerone}>
-  {chartData && chartData.length > 0 ? (
-    <div className={styles.graphecontainer}>
-      <Graphebar chartData={chartData} className={styles.graphe} />
-    </div>
-  ) : (
-    <p>Chargement des données pour le graphique...</p>
-  )}
-</div>
-        </div>
-      ) : (
-        <div className={styles.userNotConnected}>
-          <h2>Merci de vous connecter</h2>
-        </div>
-      )}
-    </div>
-  );
+            {chartData && chartData.length > 0 ? (
+              <div className={styles.graphecontainer}>
+                <Graphebar chartData={chartData} className={styles.graphe} />
+              </div>
+            ) : (
+              <p>Aucune donnée disponible pour le graphique mensuel.</p>
+            )}
+          </div>
+        )}
+
+      </div>
+    ) : (
+      <div className={styles.userNotConnected}>
+        <h2>Merci de vous connecter</h2>
+      </div>
+    )}
+  </div>
+  )
 }
 
 export default CigfreeHomeFront;
