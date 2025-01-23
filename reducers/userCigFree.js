@@ -6,6 +6,8 @@ const initialState = {
     userName: null,
     dateCreation: null,
     cigarettePrice: 0.0,
+    preferedChoiceCig: false,
+    preferedChoiceVap: false,
     chartDataWeek: [null],
     chartDataMonth: [null],
   },
@@ -38,6 +40,13 @@ export const userSlice = createSlice({
       console.log(
         "Reducer updatecigarettePrice sur userCigFree",
         state.value.cigarettePrice
+      );
+    },
+    updatePreferedChoiceVap: (state, action) => {
+      state.value.preferedChoiceVap = action.payload;
+      console.log(
+        "Reducer updatepreferedChoiceVap sur userCigFree",
+        state.value.preferedChoiceVap
       );
     },
     updateDataChartWeek: (state, action) => {

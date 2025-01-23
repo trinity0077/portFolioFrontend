@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { groupDataByMonth } from "../../modules/groupDataByMonth";
 import { groupDataByDay } from "../../modules/groupDataByDay";
-
 import { calculateprice } from "../../modules/calculateprice";
 
 // const { calculateprice } = require("../modules/calculateprice.ts"); // module de calcule du prix
@@ -31,6 +30,7 @@ function CigfreeHomeFront() {
   const [chartDataDay, setChartDataDay] = useState([]);
   const [cigarettePrice, setCigarettePrice] = useState(null);
   const [loading, setLoading] = useState(true);
+  
 
   // let BACKEND_ADDRESS = ""
   // let cigarettePrice = 0.6;
@@ -248,6 +248,8 @@ function CigfreeHomeFront() {
                   value={cigarettePrice}
                   pattern="^\d+(\.\d{1,2})?$" // Assure la validation au niveau HTML aussi
                   title="Veuillez entrer un nombre avec un maximum de 2 décimales"
+                  size="5"
+                  style={{ marginBottom: '2px' }} 
                 />{" "}
                 €{" "}
                 <button id="register" onClick={() => handleCigaretteprice()}>

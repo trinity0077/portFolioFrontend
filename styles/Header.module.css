@@ -58,7 +58,11 @@
 
 	display: flex;
 	justify-content: center;
-	align-items: center;
+
+}
+.botselectionflex{
+	display: flex;
+	gap : 5vw;
 }
 
 .userSection {
@@ -173,8 +177,10 @@
 	}
 
 	.botselection{
+		display: flex;
 		width: 98vw;
 		justify-content: center;
+   		align-items: center;
 	}
 
 	.topHeadercontainer{

@@ -223,7 +223,10 @@ function CigfreeHeader() {
         </div>
         <div className={styles.botHeadercontainer}>
           <div className={styles.botselection}>
-            {userSectionDateinscription}
+          <div className={styles.botselectionflex}>
+            <div>cig</div>
+            <div>vape</div>
+            </div>
           </div>
         </div>
 
