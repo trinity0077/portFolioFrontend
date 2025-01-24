@@ -87,7 +87,8 @@ const FolioNavAndRedirection = () => {
         >
           Section 1 activée
         </div>
-        <div style={{ display: activeButton === 2 ? "block" : "none" }}>
+        <div style={{ display: activeButton === 2 ? "block" : "none"
+         }}>
           <CigfreeApp />
         </div>
         {/* <div

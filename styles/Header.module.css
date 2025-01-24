@@ -2,7 +2,10 @@
 	font-family: "Old London";
 	src: url("/fonts/OldLondon.ttf");
 }
-
+.ant-modal {
+	width: 90vw !important;
+	max-width: 520px !important;
+  }
 .header {
 	border-bottom: 3px rgb(89, 103, 233) solid;
 	border-bottom-left-radius: 15px;
