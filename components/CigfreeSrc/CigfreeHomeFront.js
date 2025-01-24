@@ -276,7 +276,7 @@ function CigfreeHomeFront() {
                 {totalNoSmoked}
               </div>
               <p>
-                Cigarettes économisées ≃
+                Cigarettes non fumées ≃
                 <span className={styles.calculatePriceCss}>
                   {totalSaveInEuroCigarette}{" "}
                 </span>{" "}
