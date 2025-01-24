@@ -10,6 +10,7 @@ const initialState = {
     preferedChoiceVap: false,
     chartDataWeek: [null],
     chartDataMonth: [null],
+    userLocalDate: null,
   },
 };
 
@@ -34,6 +35,7 @@ export const userSlice = createSlice({
       state.value.cigarettePrice = 0;
       state.value.chartDataWeek = [null];
       state.value.chartDataMonth = [null];
+      state.value.userLocalDate = null;
     },
     updateCigarettePrice: (state, action) => {
       state.value.cigarettePrice = action.payload;
@@ -64,6 +66,10 @@ export const userSlice = createSlice({
         state.value.chartDataMonth
       );
     },
+    updateUserLocalDate: (state, action) => {
+      state.value.userLocalDate = action.payload; // Ajout de la mise à jour de la date locale
+      console.log("Reducer updateUserLocalDate:", state.value.userLocalDate);
+    },
   },
 });
 
@@ -73,5 +79,6 @@ export const {
   updateDataChartWeek,
   updateDataChartMonth,
   updateCigarettePrice,
+  updateUserLocalDate,
 } = userSlice.actions;
 export default userSlice.reducer;

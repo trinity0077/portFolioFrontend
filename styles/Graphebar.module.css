@@ -1,4 +1,4 @@
-.App {
+/* .App {
     box-sizing:content-box;
     margin: 10px;
     padding: 0%;
@@ -10,8 +10,37 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing:content-box;
-}
-
+} */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap:10px;
+    margin: 0px;
+  }
+  .graphbarwrap{
+    /* margin: 10px; */
+      max-height: 30vh;
+    /* border-radius: 10px; */
+    /* border: 1px solid rgb(89, 125, 233) */
+  }
+.graphcontainer {
+    width: 100%;
+    /* max-height: 40vh; */
+    /* aspect-ratio: 16 / 10;  */
+    /* Maintient un ratio 16/10 */
+    /* margin-bottom: 20px; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* background: #f9f9f9;  */
+   
+  }
+  .H2class {
+    text-align: center;
+    margin-top: 10px;
+  }
 .card {
     padding: 1%;
     flex: 1 0 50%;
@@ -20,18 +49,40 @@
 
     
 }
-
 @media (min-width: 798px) {
     .App {
+        display: flex;
+        flex-direction: row; /* Permet de placer les graphes côte à côte */
+        justify-content: center; /* Optionnel : ajuste l'alignement horizontal */
+        gap: 20px; /* Ajoute un espace entre les conteneurs */
+        box-sizing: border-box;
+    }
+    
+    .graphcontainer {
+        width: 48%; /* Chaque graphe occupe environ la moitié de l'espace */
+        box-sizing: border-box;
+    }
+
+    .graphebarcontainer {
+        display: flex;
+        gap: 20px; /* Ajoute un espacement entre les graphiques si nécessaire */
+        width: 100%;
+    }
+}
+
+/* @media (min-width: 798px) {
+    .App {
+        display:flex;
+        justify-content: space-between;
         box-sizing:border-box;
-        margin: 10px;
-        padding: 0%;
+
     
     }
     
     .graphebarcontainer {
         display: flex;
-        flex-wrap: wrap;
+   
+        width: 48%;
     }
     .card {
         padding: 1%;
@@ -42,4 +93,4 @@
     
         
     }
-}
+} */

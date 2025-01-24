@@ -36,7 +36,8 @@
 .graphecontainer {
 	box-sizing:content-box;
 	margin: 10px;
-	height:100%;
+	
+	/* aspect-ratio: 16/8; */
 
 
 }
@@ -180,7 +181,7 @@
 		margin: 10px;
 	}
 
-	.graphecontainer {
+	/* .graphecontainer {
 		box-sizing:content-box;
 		margin: 10px;
 		margin-left: 10%;
@@ -188,7 +189,7 @@
 		
 	
 	
-	}
+	} */
 	.graphe {
 	
 		box-sizing:content-box;
@@ -200,8 +201,7 @@
 	.graphecontainer {
 		box-sizing:content-box;
 		margin: 10px;
-		margin-left: 18%;
-		margin-right: 18%;
+	
 		
 	
 	
@@ -211,8 +211,7 @@
 @media (min-width: 1500px) { /* Par exemple, à partir de 768px de large */
 	.infoUserContainerOne {
 		display: flex;
-		flex-direction: row; /* Affichage en ligne */
-		
+		flex-direction: row; /* Affichage en ligne */	
 		justify-content: center;
 		align-items: center;
 		margin: 10px;
@@ -222,8 +221,5 @@
 	.graphecontainer {
 		box-sizing:content-box;
 		margin: 10px;
-		margin-left: 23%;
-		margin-right: 23%;
-		
 	}
 }

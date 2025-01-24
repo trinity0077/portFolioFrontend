@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { login, logout } from "../../reducers/userCigFree";
+import { login, logout, updateUserLocalDate } from "../../reducers/userCigFree";
 import styles from "../../styles/Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -31,8 +31,9 @@ function CigfreeHeader() {
 
 
   useEffect(() => {
-    setDate(new Date());
+    const localDate = (new Date());
     Moment.globalLocale = "fr";
+    dispatch(updateUserLocalDate(localDate))
     if (!user.token) {
       setIsModalVisible(!isModalVisible);
     }
@@ -175,10 +176,10 @@ function CigfreeHeader() {
   }
 
   let userSection;
-  let userSectionDateinscription;
   if (user.token) {
     userSection = (
       <div className={styles.logoutSection}>
+        {user.localDate}
         <p>Salutation</p>
         <div className={styles.logoutSectionUsername}>
           {user.userName}
