@@ -5,15 +5,43 @@
 /* .ant-modal {
 	width: 90vw !important;
 	max-width: 150px !important;
-  } */
-  .ant-modal .ant-zoom-appear .ant-zoom-appear-active .ant-zoom {
-	width: 90vw !important;
-  }
-
-  .ant-modal-content{
-	width: 90vw !important;
-  }
-.header {
+	} */
+	/* Pour les petits écrans (moins de 200px de hauteur)  test  */
+	@media (max-height: 520px) {
+		.ant-modal-wrap{
+			max-width: 100px;
+		}
+		.ant-modal {
+			width: 100px;
+			max-height: 80vh;  /* Limiter la hauteur à 80% de la hauteur de l'écran */
+			overflow: auto;    /* Permettre le défilement si la modal dépasse */
+			padding: 0px;     /* Réduire les marges internes */
+		}
+		
+		.ant-modal-content {
+			padding: 0px; 
+			width: 100px;    /* Réduire le padding du contenu de la modal */
+		}
+		
+		/* Facultatif: ajuster la taille de la police si nécessaire */
+		.ant-modal-body {
+			width: 100px;
+			font-size: 14px;  /* Réduire la taille de la police pour les petits écrans */
+		}
+		#react-modals {
+			max-width: 200px; /* ou toute autre valeur pour limiter la largeur */
+			height: 100%; /* Prend toute la hauteur du parent */
+			max-height: 90vh; /* Limite la hauteur à 90% de la hauteur de la fenêtre */
+			overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+			box-sizing: border-box; /* Pour inclure le padding et border dans la taille totale */
+		  }
+		
+		
+	}
+		#react-modals {
+			overflow: auto;
+	}
+	.header {
 	border-bottom: 3px rgb(89, 103, 233) solid;
 	border-bottom-left-radius: 15px;
  	border-bottom-right-radius: 15px;
@@ -111,9 +139,6 @@
 	border-top: 0.5px lightgray solid;
 }
 
-#react-modals {
-	width: 100%;
-}
 
 .registeredContainer {
 	display: flex;
