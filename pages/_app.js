@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
-import user from "../reducers/user";
+import user from "../reducers/user"; // ancien a suppr
 import userCigFree from "../reducers/userCigFree"
 
 import { persistStore, persistReducer } from "redux-persist";
