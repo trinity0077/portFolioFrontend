@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCigarettePrice } from "../../reducers/userCigFree";
-import Graphebar from "./Graphebar"; //Graphebarjour
-// import Graphebarjour from "./Graphebarjour";
+import Graphebar from "./Graphebar"; 
 import styles from "../../styles/CigfreeHomeFront.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
@@ -338,39 +337,6 @@ function CigfreeHomeFront() {
     )}
   </div>
 )}
-
-          {/* Affichage conditionnel des graphiques
-          {loading ? (
-            <p>Chargement des graphiques...</p>
-          ) : (
-            <div className={styles.graphecontainerone}>
-              {chartDataDay && chartDataDay.length > 0 ? (
-                <div className={styles.graphecontainer}>
-                  <Graphebarjour
-                    chartDataDay={chartDataDay}
-                    chartData={chartData}
-                    className={styles.graphe}
-                  />
-                </div>
-              ) : (
-                <p>Aucune donnée disponible pour le graphique de jour.</p>
-              )}
-            </div>
-          )} */}
-
-          {/* {loading ? (
-            <p>Chargement des graphiques...</p>
-          ) : (
-            <div className={styles.graphecontainerone}>
-              {chartData && chartData.length > 0 ? (
-                <div className={styles.graphecontainer}>
-                  <Graphebar chartData={chartData} className={styles.graphe} />
-                </div>
-              ) : (
-                <p>Aucune donnée disponible pour le graphique mensuel.</p>
-              )}
-            </div>
-          )} */}
         </div>
       ) : (
         <div className={styles.userNotConnected}>

@@ -37,14 +37,11 @@ h4 {
 
 input {
   border: none;
-  border-bottom: 0.5px lightgray solid;
+  /* border-bottom: 0.5px lightgray solid; */
   margin-bottom: 15px;
   text-align: center;
 }
 
-input:focus {
-  outline: none;
-}
 
 button {
   height: 25px;

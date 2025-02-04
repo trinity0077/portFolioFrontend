@@ -1,9 +1,7 @@
-/* .homeContainerAll{
-	background-color: rgb(255, 255, 255);
-} */
+
 .userNotConnected{
 	position: absolute;
-	top: 50%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
@@ -12,14 +10,14 @@
 	/* animation: rotation 5s infinite; */
 }
 
-@keyframes rotation {
+/* @keyframes rotation {
 	0% {
 	  transform: translate(-50%, -50%) rotate(0deg);
 	}
 	100% {
 	  transform: translate(-50%, -50%) rotate(360deg);
 	}
-  }
+  } */
 
 .sectionTitle {
 	margin-left: 25px;
@@ -36,13 +34,8 @@
 .graphecontainer {
 	box-sizing:content-box;
 	margin: 10px;
-	
-	/* aspect-ratio: 16/8; */
-
-
 }
 .graphe {
-
 	box-sizing:content-box;
 }
 
@@ -52,7 +45,6 @@
 	justify-content: center;
 	align-items: center;
 	margin: 10px;
-
 }
 
 .btnCigSectionplus {
@@ -112,8 +104,6 @@
 	border: 1.5px solid rgb(89, 125, 233);
 	display: flex;
 	flex-direction: row; /* Affichage en ligne */
-	
-	/* justify-content: center; */
 	align-items: center;
 	margin: 10px;
 }
@@ -180,16 +170,6 @@
 		justify-content: center;
 		margin: 10px;
 	}
-
-	/* .graphecontainer {
-		box-sizing:content-box;
-		margin: 10px;
-		margin-left: 10%;
-		margin-right: 10%;
-		
-	
-	
-	} */
 	.graphe {
 	
 		box-sizing:content-box;
