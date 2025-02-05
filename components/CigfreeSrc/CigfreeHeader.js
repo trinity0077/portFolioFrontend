@@ -146,7 +146,11 @@ function CigfreeHeader() {
     <div className={styles.logoutSection}>
       <p>Salutation</p>
       <div className={styles.logoutSectionUsername}>{user.userName}</div>
-      <button onClick={handleLogout}>Logout</button>
+      <div className={styles.logoutSectionUsername}>
+      <button 
+      className={styles.logoutButton}
+      onClick={handleLogout}>Logout</button>
+        </div>
     </div>
   ) : (
     <div className={styles.headerIcons}>
@@ -183,9 +187,6 @@ function CigfreeHeader() {
               onClick={(e) => e.stopPropagation()}
             >
               {modalContent}
-              <button className={styles.closeButton} onClick={toggleModal}>
-                X
-              </button>
             </div>
           </div>
         )}
