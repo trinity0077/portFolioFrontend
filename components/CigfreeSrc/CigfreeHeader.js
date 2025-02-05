@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, updateUserLocalDate } from "../../reducers/userCigFree";
-import styles from "../../styles/Header.module.css";
+import styles from "../../styles/CigfreeHeader.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Moment from "react-moment";
