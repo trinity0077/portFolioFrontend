@@ -4,7 +4,7 @@ import { login, logout, updateUserLocalDate } from '../../reducers/userCigFree';
 import { UserIcon, XIcon } from 'lucide-react';
 import styles from '../../styles/CigFreeHeader.module.css';
 
-function CigfreeHeader() {
+function CigfreeHeaderTest() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.userCigFree.value);
 
@@ -189,7 +189,7 @@ function CigfreeHeader() {
   );
 }
 
-export default CigfreeHeader;
+export default CigfreeHeaderTest;
 
 // import { useEffect, useState } from 'react';
 // import { UserIcon, XIcon } from 'lucide-react';
