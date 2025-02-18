@@ -1,0 +1,45 @@
+/* HomeEmailContact.module.css */
+
+.container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: rgba(125, 155, 121, 0.1);
+    margin: 0 auto 1rem;
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #7d9b79;
+}
+
+.title {
+    font-size: 1.875rem; /* équivalent à text-3xl */
+    font-weight: bold;
+    color: #1f2937; /* text-gray-900 */
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #4b5563; /* text-gray-600 */
+    max-width: 28rem;
+    margin: 0 auto;
+}

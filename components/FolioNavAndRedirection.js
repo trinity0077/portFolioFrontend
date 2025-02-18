@@ -1,21 +1,22 @@
+import { TypingAnimation } from "../modules/typingAnimation";
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import CigfreeApp from "./CigfreeSrc/CigfreeApp";
+import HomeEmailContact from "./EmailContactPage/HomeEmailContact";
 import styles from "../styles/HeaderFolioNav.module.css";
-
+import EmailContactForm from "./EmailContactPage/EmailContactForm";
 
 const FolioNavAndRedirection = () => {
   const [activeButton, setActiveButton] = useState(null);
-  const [activeHeader, setActiveHeader] =useState("")
+  const [activeHeader, setActiveHeader] = useState("");
 
-
-// demarage sur le 1 er bouton
+  // demarage sur le 1 er bouton
   useEffect(() => {
     setActiveButton(1);
     const defaultTitle = getHeadTitle(1); // Définit le titre par défaut
     setActiveHeader(defaultTitle); // Met à jour l'état du titre
   }, []);
-  
+
   // les titles Header des composants activé
   const getHeadTitle = (buttonIndex) => {
     // console.log(activeButton, 'bouton activé')
@@ -27,22 +28,20 @@ const FolioNavAndRedirection = () => {
       case 3:
         return "Section 3";
       default:
-        return "It's Me ! default"; 
+        return "It's Me ! default";
     }
   };
 
-  useEffect
+  useEffect;
 
   //Activation des boutons de la navbar
   const handleButtonClick = (buttonIndex) => {
-    setActiveButton((prev)=> {
+    setActiveButton((prev) => {
       const newButton = buttonIndex;
       setActiveHeader(getHeadTitle(newButton));
-      return newButton
+      return newButton;
     });
   };
-
-
 
   return (
     <div className={styles.container}>
@@ -51,13 +50,17 @@ const FolioNavAndRedirection = () => {
       </Head>
       <nav className={styles.nav}>
         <button
-          className={`${styles.button} ${activeButton === 1 ? styles["button-active"] : ""}`}
+          className={`${styles.button} ${
+            activeButton === 1 ? styles["button-active"] : ""
+          }`}
           onClick={() => handleButtonClick(1)}
         >
           It's Me
         </button>
         <button
-          className={`${styles.button} ${activeButton === 2 ? styles["button-active"] : ""}`}
+          className={`${styles.button} ${
+            activeButton === 2 ? styles["button-active"] : ""
+          }`}
           onClick={() => handleButtonClick(2)}
         >
           CigFree
@@ -68,38 +71,31 @@ const FolioNavAndRedirection = () => {
         >
           Bouton 3
         </button> */}
-     
+
         <div className={styles["container-email"]}>
           <a href="mailto:gryspeerdt.camille@gmail.com">
-            <img className={styles["emailIconPlane"]}src="/paper-plane.svg" alt="Icon" style={{ width: "50px", height: "50px" }} />
+            <img
+              className={styles["emailIconPlane"]}
+              src="/paper-plane.svg"
+              alt="Icon"
+              style={{ width: "50px", height: "50px" }}
+            />
             <p>Email</p>
           </a>
         </div>
       </nav>
 
       <div>
-        <div
-          style={{
-            display: activeButton === 1 ? "block" : "none",
-            padding: "1rem",
-            backgroundColor: "#f4f4f4",
-          }}
-        >
-          Section 1 activée
-        </div>
-        <div style={{ display: activeButton === 2 ? "block" : "none"
-         }}>
+        {activeButton === 1 && (
+          <div style={{ padding: "1rem", backgroundColor: "#f4f4f4" }}>
+            Section 1 activée
+            <TypingAnimation>Camille Gryspeerdt</TypingAnimation>
+            <HomeEmailContact></HomeEmailContact>
+          </div>
+        )}
+        <div style={{ display: activeButton === 2 ? "block" : "none" }}>
           <CigfreeApp />
         </div>
-        {/* <div
-          style={{
-            display: activeButton === 3 ? "block" : "none",
-            padding: "1rem",
-            backgroundColor: "#f4f4f4",
-          }}
-        >
-          Section 3 activée
-        </div> */}
       </div>
     </div>
   );
