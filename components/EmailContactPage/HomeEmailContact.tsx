@@ -10,9 +10,9 @@ function HomeEmailContact() {
         <div className={styles.iconWrapper}>
           <Mail className={styles.icon} />
         </div>
-        <h1 className={styles.title}>Contactez-nous</h1>
+        <h1 className={styles.title}>Contactez-moi</h1>
         <p className={styles.description}>
-          Nous sommes là pour vous aider. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+          Je suis là pour vous aider. Remplissez le formulaire ci-dessous et je vous répondrais dans les plus brefs délais.
         </p>
       </div>
       
