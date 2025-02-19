@@ -118,9 +118,9 @@ export default function EmailContactForm() {
           <div className={styles.successIconWrapper}>
             <Mail className={styles.successIcon} />
           </div>
-          <h2 className={styles.successTitle}>Message envoyé!</h2>
+          <h2 className={styles.successTitle}>Message envoyé !</h2>
           <p className={styles.successText}>
-            Nous vous répondrons dans les plus brefs délais.
+            Je vous répondrais dans les plus brefs délais.
           </p>
         </div>
       </div>
