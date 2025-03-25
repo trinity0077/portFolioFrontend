@@ -46,7 +46,7 @@
     background-color: white;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     max-width: 28rem;
     width: 100%;
   }
@@ -76,6 +76,7 @@
   .formInput,
   .formTextarea {
     display: block;
+    min-height: 2.2rem;
     resize: vertical; /* Autorise seulement le redimensionnement vertical */
     width: 100%;
     padding: 0.75rem 1rem;

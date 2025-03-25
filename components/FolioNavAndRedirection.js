@@ -4,7 +4,6 @@ import Head from "next/head";
 import CigfreeApp from "./CigfreeSrc/CigfreeApp";
 import HomeEmailContact from "./EmailContactPage/HomeEmailContact";
 import styles from "../styles/HeaderFolioNav.module.css";
-import EmailContactForm from "./EmailContactPage/EmailContactForm";
 
 const FolioNavAndRedirection = () => {
   const [activeButton, setActiveButton] = useState(null);
@@ -26,7 +25,7 @@ const FolioNavAndRedirection = () => {
       case 2:
         return "CigFree";
       case 3:
-        return "Section 3";
+        return "Email";
       default:
         return "It's Me ! default";
     }
@@ -65,24 +64,29 @@ const FolioNavAndRedirection = () => {
         >
           CigFree
         </button>
-        {/* <button
+
+        {/*  <button
           className={`${styles.button} ${activeButton === 3 ? styles["button-active"] : ""}`}
           onClick={() => handleButtonClick(3)}
         >
           Bouton 3
         </button> */}
-
-        <div className={styles["container-email"]}>
-          <a href="mailto:gryspeerdt.camille@gmail.com">
-            <img
-              className={styles["emailIconPlane"]}
-              src="/paper-plane.svg"
-              alt="Icon"
-              style={{ width: "50px", height: "50px" }}
-            />
-            <p>Email</p>
-          </a>
-        </div>
+        <button
+          className={`${styles["container-email"]} ${
+            activeButton === 3 ? styles["Active-container-email"] : ""
+          }`}
+          onClick={() => handleButtonClick(3)}
+        >
+          <img
+            className={` ${styles["emailIconPlane"]} ${
+              activeButton === 3 ? styles["Active-emailIconPlane"] : ""
+            }`}
+            src="/paper-plane.svg"
+            alt="Icon"
+            style={{ width: "50px", height: "50px" }}
+          />
+          <p>Email</p>
+        </button>
       </nav>
 
       <div>
@@ -90,12 +94,18 @@ const FolioNavAndRedirection = () => {
           <div style={{ padding: "1rem", backgroundColor: "#f4f4f4" }}>
             Section 1 activée
             <TypingAnimation>Camille Gryspeerdt</TypingAnimation>
-            <HomeEmailContact></HomeEmailContact>
           </div>
         )}
+
         <div style={{ display: activeButton === 2 ? "block" : "none" }}>
           <CigfreeApp />
         </div>
+
+        {activeButton === 3 && (
+          <div style={{ padding: "0.5rem", backgroundColor: "#f4f4f4" }}>
+            <HomeEmailContact />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -33,6 +33,7 @@
 }
 
 /* Conteneur Email */
+
 .container-email {
   display: flex;
   align-items: center;
@@ -42,17 +43,10 @@
   opacity: 0.6;
   font-size: inherit;
 }
-.container-email:hover {
+.container-email:hover,
+.Active-container-email{
   transform: scale(1.15);
   opacity: 1;
-}
-
-.container-email a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  font-size: inherit;
 }
 
 .container-email img.emailIconPlane {
@@ -60,10 +54,12 @@
   transition: transform 0.3s ease;
 }
 
-.container-email:hover img.emailIconPlane {
+.container-email:hover img.emailIconPlane,
+.Active-container-email img.emailIconPlane {
   transform: rotate(0deg);
 }
 .container-email p {
-  font-size: inherit;
+  color: white;
+  /* font-size: inherit; */
 }
 

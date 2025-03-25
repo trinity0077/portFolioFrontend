@@ -29,7 +29,7 @@ export function TypingAnimation({
   const elementRef = useRef<HTMLElement | null>(null);
   
   useEffect(() => {
-    // Réinitialiser l'état à chaque remontée
+    // Réinitialiser l'état à chaque remontée du composant
     setDisplayedText("");
     setStarted(false);
   }, []);
