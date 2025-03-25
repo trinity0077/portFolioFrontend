@@ -171,6 +171,7 @@ function CigfreeHeader() {
             {userSection}
           </div>
         </div>
+        {/* pour plus tard bouton de vavigation ? 
         <div className={styles.botHeadercontainer}>
           <div className={styles.botselection}>
             <div className={styles.botselectionflex}>
@@ -178,7 +179,7 @@ function CigfreeHeader() {
               <div>vape</div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {isModalVisible && (
           <div className={styles.customModalOverlay} onClick={toggleModal}>

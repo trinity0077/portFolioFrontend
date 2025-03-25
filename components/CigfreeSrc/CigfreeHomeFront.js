@@ -251,7 +251,7 @@ function CigfreeHomeFront() {
                   style={{ marginBottom: '2px' }} 
                 />{" "}
                 €{" "}
-                <button id="register" onClick={() => handleCigaretteprice()}>
+                <button id="confirmPriceCigarette" className={styles.confirmPriceCigarette} onClick={() => handleCigaretteprice()}>
                   confirmer
                 </button>
               </p>

@@ -1,4 +1,10 @@
-
+.confirmPriceCigarette {
+	transition: transform 0.3s ease-in-out;
+  }
+  
+.confirmPriceCigarette:hover {
+	transform: scale(1.1);
+  }
 .userNotConnected{
 	position: absolute;
 	top: 50%;
@@ -9,15 +15,6 @@
 	align-items: center;
 	/* animation: rotation 5s infinite; */
 }
-
-/* @keyframes rotation {
-	0% {
-	  transform: translate(-50%, -50%) rotate(0deg);
-	}
-	100% {
-	  transform: translate(-50%, -50%) rotate(360deg);
-	}
-  } */
 
 .sectionTitle {
 	margin-left: 25px;
