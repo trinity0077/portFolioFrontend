@@ -77,6 +77,7 @@ export default function EmailContactForm() {
         setSubmitted(true);
         console.log(response)
         setEmailId(response.response.data.id)
+
       } else {
         setErrors({ ...errors, form: response.error || "Erreur lors de l'envoi du message" });
       }

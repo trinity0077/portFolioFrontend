@@ -7,7 +7,7 @@ export const apiSendContactEmail = async (formData: ContactFormData) => {
       ? "http://localhost:3000"
       : "https://port-folio-backend-three.vercel.app";
 
-    const API_ENDPOINT = "/emails/test"
+    const API_ENDPOINT = "/emails/send"
     try {
       const response = await fetch(`${BACKEND_ADDRESS}${API_ENDPOINT}`, {
         method: "POST",
@@ -22,4 +22,5 @@ export const apiSendContactEmail = async (formData: ContactFormData) => {
       return { success: false, error: "Erreur de connexion au serveur" };
     }
   };
+  
   
