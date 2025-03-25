@@ -1,23 +1,20 @@
 import styles from "../../styles/ContactForm/EmailContactForm.module.css";
+import { apiSendContactEmail } from "../../modules/apiSendEmailContact"; // Mets le bon chemin
 import React, { useState } from "react";
 import { Mail, Send, AlertCircle } from "lucide-react";
+import ContactFormData from "../../modules/contactTypes"
 
-interface FormData {
-  email: string;
-  subject: string;
-  message: string;
-  gdprConsent: boolean;
-}
 
 interface FormErrors {
   email?: string;
   subject?: string;
   message?: string;
   gdprConsent?: string;
+  form?: string;
 }
 
 export default function EmailContactForm() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<ContactFormData>({
     email: "",
     subject: "",
     message: "",
@@ -26,6 +23,7 @@ export default function EmailContactForm() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [emailId, setEmailId] = useState("");
 
   const validateEmail = (email: string) => {
     if (!email.includes("@")) {
@@ -39,7 +37,7 @@ export default function EmailContactForm() {
       : "Veuillez entrer un email valide";
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: FormErrors = {};
 
@@ -71,10 +69,22 @@ export default function EmailContactForm() {
 
     if (Object.keys(newErrors).length === 0) {
       // Here you would typically send the form data to your backend
-      setSubmitted(true);
+
+      
+      const response = await apiSendContactEmail(formData);
       console.log("Form submitted:", formData);
+      if (response.success) {
+        setSubmitted(true);
+        console.log(response)
+        setEmailId(response.response.data.id)
+      } else {
+        setErrors({ ...errors, form: response.error || "Erreur lors de l'envoi du message" });
+      }
     } else {
       setErrors(newErrors);
+    //   console.log("Form submitted:", formData);
+    // } else {
+    //   setErrors(newErrors);
     }
   };
 
@@ -111,16 +121,22 @@ export default function EmailContactForm() {
       }));
     }
   };
+const handleReturn = () => {
+setSubmitted(false)
+}
+
   if (submitted) {
     return (
       <div className={styles.successMessageContainer}>
         <div className={styles.successContent}>
+          <button className={styles.successReturn} onClick={handleReturn} >Retour</button>
           <div className={styles.successIconWrapper}>
             <Mail className={styles.successIcon} />
           </div>
           <h2 className={styles.successTitle}>Message envoyé !</h2>
-          <p className={styles.successText}>
-            Je vous répondrais dans les plus brefs délais.
+          <p className={styles.successText}><br/> Je vous répondrais dans les plus brefs délais.
+          </p>     
+           <p className={styles.successTextIdEmail}> <br/>Reference du mail : <br/><br/>{emailId}
           </p>
         </div>
       </div>

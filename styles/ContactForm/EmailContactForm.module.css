@@ -1,4 +1,26 @@
 /* Conteneur du message de succès */
+.successReturn {
+  background: none;
+  border: none;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* position: absolute; */
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.successReturn:hover {
+  color: #16a34a;
+}
+.successTextIdEmail{
+  color: #4b5563;
+  font-size: small;
+
+}
 .successMessageContainer {
     background-color: white;
     padding: 2rem;
