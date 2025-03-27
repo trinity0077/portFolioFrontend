@@ -25,7 +25,7 @@ const FolioNavAndRedirection = () => {
       case 2:
         return "CigFree";
       case 3:
-        return "Email";
+        return "Contact";
       default:
         return "It's Me ! default";
     }
@@ -85,7 +85,7 @@ const FolioNavAndRedirection = () => {
             alt="Icon"
             style={{ width: "50px", height: "50px" }}
           />
-          <p>Email</p>
+          <p>Contact</p>
         </button>
       </nav>
 
