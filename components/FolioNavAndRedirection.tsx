@@ -76,39 +76,23 @@ const FolioNavAndRedirection = () => {
 >
   CigFree
 </button>
-    <button onClick={() => {
+  <button onClick={() => {
     handleOpenProject("https://newspaper-front-two.vercel.app");
     setShowProjectsMenu(false);}}>
       Morning News
-    </button>
+  </button>
+  <button onClick={() => {
+    handleOpenProject("https://mymoviez-frontend-nine.vercel.app/");
+    setShowProjectsMenu(false);}}>
+      My Moviez
+  </button>
+
   </div>
 )}
+
+
+
  </div>
-
-
-{/* copy dropbuttonmenu  */}
-
-        {/* <div className={styles.dropdown}>
-        <button
-  className={`${styles.button} ${styles["projects-button"]} ${
-    showProjectsMenu ? styles["button-active"] : ""
-  }`}
-  onClick={() => setShowProjectsMenu((prev) => !prev)}
->
-  Projets
-</button>
-{showProjectsMenu && (
-  <div
-    className={styles.dropdownMenu}
-    onMouseLeave={() => setShowProjectsMenu(false)}
-  >
-    <button onClick={() => handleButtonClick(2)}>CigFree</button>
-    <button onClick={() => handleOpenProject("https://newspaper-front-two.vercel.app")}>
-      Morning News
-    </button>
-  </div>
-)}
-</div> */}
 
         <button
           className={`${styles["container-email"]} ${activeButton === 3 ? styles["Active-container-email"] : ""}`}
