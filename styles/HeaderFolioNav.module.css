@@ -1,14 +1,14 @@
-.nav{
+.nav {
   display: flex;
   justify-content: space-around;
-  padding-top: 1rem ;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
   align-items: center;
-  font-size: x-large ;
+  font-size: x-large;
   background-color: #7d9b79;
 }
 
-.typingText{
+.typingText {
   color: #7d9b79;
   background-color: #ffffff;
   font-size: 4rem;
@@ -20,10 +20,9 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.typingTextP{
-
+.typingTextP {
   color: #7d9b79;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   font-size: 2rem;
   font-weight: bold;
   line-height: 3rem;
@@ -60,7 +59,7 @@
 .dropdownMenu {
   position: absolute;
   top: 0%; /* Juste en dessous */
-  left: 110%;   /* Aligné à gauche du bouton */
+  left: 110%; /* Aligné à gauche du bouton */
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -101,29 +100,28 @@
     transform: none;
     min-width: 100%;
   }
-  
-.typingText{
-  color: #7d9b79;
-  background-color: #ffffff;
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 3.5rem;
-  letter-spacing: -0.02em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin-left: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.typingTextP{
 
-  color: #7d9b79;
-  background-color: #ffffff; 
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 2rem;
-  letter-spacing: -0.02em;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
+  .typingText {
+    color: #7d9b79;
+    background-color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .typingTextP {
+    color: #7d9b79;
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* Conteneur Email */
@@ -138,7 +136,7 @@
   font-size: inherit;
 }
 .container-email:hover,
-.Active-container-email{
+.Active-container-email {
   transform: scale(1.15);
   opacity: 1;
 }
@@ -156,4 +154,3 @@
   color: white;
   /* font-size: inherit; */
 }
-

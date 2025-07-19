@@ -27,7 +27,7 @@ export function TypingAnimation({
   const [displayedText, setDisplayedText] = useState("");
   const [started, setStarted] = useState(false);
   const elementRef = useRef<HTMLElement | null>(null);
-  
+
   useEffect(() => {
     // Réinitialiser l'état à chaque remontée du composant
     setDisplayedText("");
@@ -51,7 +51,7 @@ export function TypingAnimation({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     if (elementRef.current) {
@@ -83,12 +83,15 @@ export function TypingAnimation({
     <MotionComponent
       ref={elementRef}
       className={className} // Utilisez directement className
-      style={{ // Ajoutez vos styles CSS ici
-        // fontSize: "4rem",
-        // fontWeight: "bold",
-        // lineHeight: "5rem",
-        // letterSpacing: "-0.02em",
-      }}
+      style={
+        {
+          // Ajoutez vos styles CSS ici
+          // fontSize: "4rem",
+          // fontWeight: "bold",
+          // lineHeight: "5rem",
+          // letterSpacing: "-0.02em",
+        }
+      }
     >
       {displayedText}
     </MotionComponent>
