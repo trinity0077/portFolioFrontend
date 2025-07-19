@@ -101,6 +101,29 @@
     transform: none;
     min-width: 100%;
   }
+  
+.typingText{
+  color: #7d9b79;
+  background-color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3.5rem;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-left: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.typingTextP{
+
+  color: #7d9b79;
+  background-color: #ffffff; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
 }
 
 /* Conteneur Email */
