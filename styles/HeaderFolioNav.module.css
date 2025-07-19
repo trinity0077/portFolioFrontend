@@ -16,7 +16,8 @@
   line-height: 5rem;
   letter-spacing: -0.02em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .typingTextP{
 
