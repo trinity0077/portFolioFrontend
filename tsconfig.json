@@ -21,7 +21,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/CigfreeSrc/CigfreeApp.js"
-  ],
+, "components/FolioNavAndRedirection.tsx"  ],
   "exclude": ["node_modules"]
 }
 // {

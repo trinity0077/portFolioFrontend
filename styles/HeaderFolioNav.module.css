@@ -31,6 +31,56 @@
   opacity: 1;
   transform: scale(1.1);
 }
+/* Conteneur du menu déroulant */
+.dropdown {
+  position: relative; /* Référence pour position:absolute de dropdownMenu */
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 0%; /* Juste en dessous */
+  left: 110%;   /* Aligné à gauche du bouton */
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  z-index: 100;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Ajustement du bouton pour qu'il soit bien référencé */
+.projects-button {
+  position: relative;
+}
+
+/* Boutons du menu */
+.dropdownMenu button {
+  background: none;
+  border: none;
+  color: #7d9b79;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu button:hover {
+  background: #7d9b79;
+  color: white;
+}
+
+/* Fermeture du menu si on clique hors sur mobile */
+@media (max-width: 768px) {
+  .dropdownMenu {
+    left: 0;
+    transform: none;
+    min-width: 100%;
+  }
+}
 
 /* Conteneur Email */
 
