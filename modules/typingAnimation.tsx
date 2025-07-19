@@ -84,10 +84,10 @@ export function TypingAnimation({
       ref={elementRef}
       className={className} // Utilisez directement className
       style={{ // Ajoutez vos styles CSS ici
-        fontSize: "4rem",
-        fontWeight: "bold",
-        lineHeight: "5rem",
-        letterSpacing: "-0.02em",
+        // fontSize: "4rem",
+        // fontWeight: "bold",
+        // lineHeight: "5rem",
+        // letterSpacing: "-0.02em",
       }}
     >
       {displayedText}

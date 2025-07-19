@@ -9,8 +9,24 @@
 }
 
 .typingText{
-   color: #7d9b79;
-   background-color: #ffffff;
+  color: #7d9b79;
+  background-color: #ffffff;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 2rem;
+}
+.typingTextP{
+
+  color: #7d9b79;
+  background-color: #ffffff; 
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 /* Boutons de navigation */
 .button {
