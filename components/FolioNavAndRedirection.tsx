@@ -8,7 +8,7 @@ import styles from "../styles/HeaderFolioNav.module.css";
 const FolioNavAndRedirection = () => {
   const [activeButton, setActiveButton] = useState<number | null>(1);
   const [activeHeader, setActiveHeader] = useState("");
-  const [showProjectsMenu, setShowProjectsMenu] = useState(false); // Gère le menu déroulant
+  const [showProjectsMenu, setShowProjectsMenu] = useState(false);
 
   useEffect(() => {
     setActiveButton(1);
@@ -29,15 +29,24 @@ const FolioNavAndRedirection = () => {
   };
 
   const handleButtonClick = (buttonIndex: number) => {
-    setActiveButton((prev) => {
-      const newButton = buttonIndex;
-      setActiveHeader(getHeadTitle(newButton));
-      return newButton;
-    });
+    setActiveButton(buttonIndex);
+    setActiveHeader(getHeadTitle(buttonIndex));
   };
 
   const handleOpenProject = (url: string) => {
     window.open(url, "_blank");
+  };
+
+  const toggleProjectsMenu = () => {
+    setShowProjectsMenu((prev) => {
+      const newState = !prev;
+      if (newState) {
+        setTimeout(() => {
+          setShowProjectsMenu(false);
+        }, 6000); 
+      }
+      return newState;
+    });
   };
 
   return (
@@ -55,7 +64,6 @@ const FolioNavAndRedirection = () => {
           It's Me
         </button>
 
-        {/* Projet avec menu déroulant */}
         <div className={styles.dropdown}>
           <button
             className={`${styles.button} ${styles["projects-button"]} ${
@@ -63,7 +71,7 @@ const FolioNavAndRedirection = () => {
                 ? styles["button-active"]
                 : ""
             }`}
-            onClick={() => setShowProjectsMenu((prev) => !prev)}
+            onClick={toggleProjectsMenu}
           >
             Projets
           </button>
@@ -75,7 +83,7 @@ const FolioNavAndRedirection = () => {
               <button
                 onClick={() => {
                   handleButtonClick(2);
-                  setShowProjectsMenu(false); // fermer le menu au clic
+                  setShowProjectsMenu(false);
                 }}
               >
                 CigFree
@@ -146,7 +154,7 @@ const FolioNavAndRedirection = () => {
         )}
 
         {activeButton === 2 && (
-          <div style={{ display: activeButton === 2 ? "block" : "none" }}>
+          <div>
             <CigfreeApp />
           </div>
         )}
