@@ -119,7 +119,7 @@ const FolioNavAndRedirection = () => {
         {activeButton === 1 && (
           <div style={{ padding: "2rem", backgroundColor: "#ffffffff",alignItems: "center" }}>
             <TypingAnimation className={styles.typingText} duration={110}>Camille Gryspeerdt</TypingAnimation>
-            <TypingAnimation className={styles.typingTextP} duration={45} delay= {1800} as="h2">Rigoureux, dynamique et passionné par la recherche de solutions innovantes pour améliorer la qualité des produits, je suis prêt à mettre mes compétences en pratique dans de nouveaux projets.</TypingAnimation>
+            <TypingAnimation className={styles.typingTextP} duration={45} delay= {1900} as="h2">Rigoureux, dynamique et passionné par la recherche de solutions innovantes pour améliorer la qualité des produits, je suis prêt à mettre mes compétences en pratique dans de nouveaux projets.</TypingAnimation>
           </div>
         )}
 
