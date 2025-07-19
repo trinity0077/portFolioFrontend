@@ -118,7 +118,7 @@ const FolioNavAndRedirection = () => {
       <div>
         {activeButton === 1 && (
           <div style={{ padding: "1rem", backgroundColor: "#f4f4f4" }}>
-            <TypingAnimation>Camille Gryspeerdt</TypingAnimation>
+            <TypingAnimation className={styles.typingText}>Camille Gryspeerdt</TypingAnimation>
           </div>
         )}
 

@@ -8,7 +8,9 @@
   background-color: #7d9b79;
 }
 
-
+.typingText{
+   color: #7d9b79;
+}
 /* Boutons de navigation */
 .button {
   border: none;
