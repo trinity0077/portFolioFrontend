@@ -57,7 +57,7 @@ const FolioNavAndRedirection = () => {
         <div className={styles.dropdown}>
         <button
   className={`${styles.button} ${styles["projects-button"]} ${
-    showProjectsMenu ? styles["button-active"] : ""
+    showProjectsMenu || activeButton === 2 ? styles["button-active"] : ""
   }`}
   onClick={() => setShowProjectsMenu((prev) => !prev)}
 >
@@ -68,8 +68,17 @@ const FolioNavAndRedirection = () => {
     className={styles.dropdownMenu}
     onMouseLeave={() => setShowProjectsMenu(false)}
   >
-    <button onClick={() => handleButtonClick(2)}>CigFree</button>
-    <button onClick={() => handleOpenProject("https://newspaper-front-two.vercel.app")}>
+<button
+  onClick={() => {
+    handleButtonClick(2);
+    setShowProjectsMenu(false); // fermer le menu au clic
+  }}
+>
+  CigFree
+</button>
+    <button onClick={() => {
+    handleOpenProject("https://newspaper-front-two.vercel.app");
+    setShowProjectsMenu(false);}}>
       Morning News
     </button>
   </div>
